@@ -25,9 +25,9 @@ $ npm install --save codemirror-typo
 
 Locate a [Hunspell dictionary](https://hunspell.github.io/) you'd like to use. You'll need a `*.aff` and `*.dic` for your spellcheck language. Below, there is more [dictionary information](#dictionaries), and a list of [where to get dictionaries](#dictionary-repos).
 
-**Load `lib/codemirror-typo.css` into your `head`:**
+**Load `lib/codemirror-typo.min.css` into your `head`:**
 ```html
-<style rel='stylesheet' href='codemirror-typo.css'></style>
+<style rel='stylesheet' href='codemirror-typo.min.css'></style>
 ```
 
 **Register `codeMirrorTypo`**:

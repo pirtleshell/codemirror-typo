@@ -1,6 +1,6 @@
 {
   "name": "codemirror-typo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": ":snail: Spellcheck your CodeMirror editor in style",
   "main": "src/index.js",
   "scripts": {
@@ -42,6 +42,8 @@
     "browserify": "^13.1.1",
     "es6ify": "^1.6.0",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-header": "^1.8.8",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
