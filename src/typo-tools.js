@@ -42,7 +42,7 @@ module.exports = {
       'width: 20px;',
       'border-radius: 1em;',
       'background: #FFFFFF;',
-      'border: 1px solid #CCCCCC',
+      'border: 1px solid #CCCCCC;',
       'color: #551A8B;',
       'padding: 3px;',
       'transition: all 0.2s;',
