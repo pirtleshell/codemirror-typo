@@ -1,5 +1,6 @@
 
 const path = require('path');
+const urljoin = require('url-join');
 const objectAssign = require('object-assign');
 const Typo = require('typo-js');
 const typoTools = require('./typo-tools');
@@ -31,7 +32,16 @@ function codeMirrorTypo(cm, lang, options) {
     config = objectAssign(config, options);
   }
 
-  const dictPath = path.join(config.dictPath, config.dictFolder, '/');
+  let resolvedPath = '';
+
+  //Cannot use path for urls. Use urljoin instead
+  if(config.dictPath.match(/^https?:\/\//i)) {
+    resolvedPath = urljoin(config.dictPath, config.dictFolder, '/');
+  } else {
+    resolvedPath = path.join(config.dictPath, config.dictFolder, '/');
+  }
+
+  const dictPath = resolvedPath;
   const affFile = config.affFile ? config.affFile : config.filename;
   const dicFile = config.dicFile ? config.dicFile : config.filename;
 
@@ -42,7 +52,7 @@ function codeMirrorTypo(cm, lang, options) {
   Promise.all(paths.map(typoTools.get)).then(data => {
     dict = new Typo(lang, data[0], data[1], {platform: 'any'});
 
-    const wordSeparators = ' `~!@#$%^&*()-_=+[]{}\\|;:"<>,./?©';
+    const wordSeparators = ' `~!@#$%^&*()-_=+[]{}\\|;:"<>,./?©0123456789';
 
     try {
       // major credit to @kofifus for the overlay
@@ -77,7 +87,7 @@ function codeMirrorTypo(cm, lang, options) {
   const typoMark = config => {
     const flag = document.createElement('i');
     flag.className = config.gutterMarkClass;
-    flag.innerHTML = '🐌';
+    flag.innerHTML = '&#128012;';
     return flag;
   };
 

@@ -36,7 +36,8 @@
   "dependencies": {
     "es6-promise": "^4.0.5",
     "object-assign": "^4.1.0",
-    "typo-js": "^1.0.1"
+    "typo-js": "^1.0.1",
+    "url-join": "^4.0.1"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
