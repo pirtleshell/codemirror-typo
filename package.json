@@ -1,6 +1,6 @@
 {
   "name": "codemirror-typo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": ":snail: Spellcheck your CodeMirror editor in style",
   "main": "src/index.js",
   "scripts": {
@@ -36,7 +36,8 @@
   "dependencies": {
     "es6-promise": "^4.0.5",
     "object-assign": "^4.1.0",
-    "typo-js": "^1.0.1"
+    "typo-js": "^1.0.1",
+    "url-join": "^4.0.1"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
