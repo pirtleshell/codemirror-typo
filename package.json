@@ -1,6 +1,6 @@
 {
   "name": "codemirror-typo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": ":snail: Spellcheck your CodeMirror editor in style",
   "main": "src/index.js",
   "scripts": {
