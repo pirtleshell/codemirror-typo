@@ -52,7 +52,7 @@ function codeMirrorTypo(cm, lang, options) {
   Promise.all(paths.map(typoTools.get)).then(data => {
     dict = new Typo(lang, data[0], data[1], {platform: 'any'});
 
-    const wordSeparators = ' `~!@#$%^&*()-_=+[]{}\\|;:"<>,./?©';
+    const wordSeparators = ' `~!@#$%^&*()-_=+[]{}\\|;:"<>,./?©0123456789';
 
     try {
       // major credit to @kofifus for the overlay
