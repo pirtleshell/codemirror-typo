@@ -1,6 +1,6 @@
 /**
  * codemirror-typo
- * @version v1.0.1
+ * @version v1.0.2
  * @link https://github.com/pirtleshell/codemirror-typo#readme
  * @license MIT
  * @author Robert Pirtle
