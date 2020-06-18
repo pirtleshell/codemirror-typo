@@ -19,7 +19,6 @@ module.exports = (cm, lineN, gutter, e, config, dict) => {
   }
 
   const words = typoTools.getTypos(config, info);
-  console.log(words);
 
   window.typoMenuOpen = true;
 

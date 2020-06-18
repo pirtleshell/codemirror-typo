@@ -87,7 +87,7 @@ function codeMirrorTypo(cm, lang, options) {
   const typoMark = config => {
     const flag = document.createElement('i');
     flag.className = config.gutterMarkClass;
-    flag.innerHTML = '🐌';
+    flag.innerHTML = '&#128012;';
     return flag;
   };
 
