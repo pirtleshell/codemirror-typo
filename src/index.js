@@ -1,5 +1,6 @@
 
 const path = require('path');
+const urljoin = require('url-join');
 const objectAssign = require('object-assign');
 const Typo = require('typo-js');
 const typoTools = require('./typo-tools');
@@ -31,7 +32,16 @@ function codeMirrorTypo(cm, lang, options) {
     config = objectAssign(config, options);
   }
 
-  const dictPath = path.join(config.dictPath, config.dictFolder, '/');
+  let resolvedPath = '';
+
+  //Cannot use path for urls. Use urljoin instead
+  if(config.dictPath.match(/^https?:\/\//i)) {
+    resolvedPath = urljoin(config.dictPath, config.dictFolder, '/');
+  } else {
+    resolvedPath = path.join(config.dictPath, config.dictFolder, '/');
+  }
+
+  const dictPath = resolvedPath;
   const affFile = config.affFile ? config.affFile : config.filename;
   const dicFile = config.dicFile ? config.dicFile : config.filename;
 
